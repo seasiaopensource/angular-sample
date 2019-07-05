@@ -1,0 +1,23 @@
+<div
+  class="htm-info-block"
+  [ngClass]="{
+    _error: messageType === 'error',
+    _success: messageType === 'success'
+  }"
+>
+  <span class="htm-info-block-icon">
+    <img
+      src="assets/images/danger.svg"
+      *ngIf="messageType === 'error'"
+      alt="icon"
+      width="15"
+    />
+    <img
+      src="assets/images/checked.svg"
+      *ngIf="messageType === 'success'"
+      alt="icon"
+      width="15"
+    />
+  </span>
+  <p class="htm-info-block-text">{{ messageContent }}</p>
+</div>

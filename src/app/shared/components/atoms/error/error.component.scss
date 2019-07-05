@@ -1,0 +1,20 @@
+@import 'variables';
+.error-section {
+  width:100%;
+  text-align: center;
+  padding: 20px 0px 40px;
+  .error-image {
+    max-height: 28px;
+  }
+
+  h2{
+    color: $key-color-2;
+    font-size: $font-size-large;
+    font-weight: 600;
+  }
+
+  p{
+    color: rgba($key-color-2, 0.5);
+    font-size: $font-size-extra-small;
+  }
+}

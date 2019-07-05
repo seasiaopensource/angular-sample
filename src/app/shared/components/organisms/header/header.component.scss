@@ -1,0 +1,104 @@
+@import "variables";
+
+header {
+  font-family: $font-family;
+}
+.h-header {
+  background: $inverted-color;
+  padding: 15px 0px;
+  .header-container {
+    max-width: 1128px;
+  }
+  @include sm\+ {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  @include md\- {
+    padding: 5px 15px;
+  }
+
+  .navbar-brand {
+    svg {
+      margin-right: 10px;
+      @include xs {
+        vertical-align: middle;
+      }
+    }
+
+    label {
+      color: $key-color-2;
+      font-size: $font-size-small;
+      font-family: $font-family-bold;
+      @include xs {
+        max-width: 200px;
+        display: inline-block;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: $font-size-extra-small;
+        vertical-align: middle;
+        line-height: 22px;
+        span {
+          width: 100%;
+          display: block;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    & > .navbar-nav {
+      margin-top: 0px;
+
+      & > .nav-item {
+        & > .nav-link {
+          font-size: $font-size-small;
+          font-weight: $font-weight-regular;
+          color: $key-color-2;
+        }
+
+        &.active {
+          & > .nav-link {
+            font-family: $font-family-bold;
+          }
+        }
+      }
+
+      @include md\- {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    border: none;
+    margin-top: -6px;
+    line-height: 22px;
+
+    &-icon {
+      background-image: url(../../../../../assets/images/hamburger-menu.svg);
+      outline: 0;
+      background-size: 24px;
+    }
+
+    &[aria-expanded="false"] {
+      .navbar-toggler-icon {
+        background-image: url(../../../../../assets/images/hamburger-menu.svg);
+        background-size: 24px;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      .navbar-toggler-icon {
+        background-image: url(../../../../../assets/images/close.svg);
+      }
+    }
+    &:focus {
+      outline: 0px;
+    }
+  }
+}

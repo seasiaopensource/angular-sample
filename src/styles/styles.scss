@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './global/fonts';
+@import 'variables';
+body {
+    background: $bg-color;
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+}
+
+body.modal-open{
+  overflow:hidden !important;
+  position: fixed;
+  height: 100%;
+  width:100%;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.tooltip-content {
+    h3 {
+        color: $key-color-2;
+        font-size: $font-size-extra-small !important;
+        font-family: $font-family-bold;
+        line-height: 0.60rem;
+    }
+    a {
+        color: $key-color-2;
+        font-size: $font-size-extra-small;
+        font-family: $font-family;
+        line-height: 0.84rem;
+    }
+    p {
+        color: rgba($key-color-2, 0.5);
+        font-size: $font-size-extra-small;
+        font-family: $font-family;
+        margin: 0 !important;
+    }
+    ul {
+        margin: 0;
+        padding: 0 15px;
+        li {
+            color: rgba($key-color-2, 0.5);
+            font-size: $font-size-extra-small;
+            font-family: $font-family;
+        }
+    }
+}
+
+.container {
+    max-width: 1128px;
+}
+
+hmt-root {
+    float: left;
+    width: 100%;
+    hmt-footer {
+        margin-top: 100px;
+        float: left;
+        width: 100%;
+    }
+    hmt-wrapper {
+        float: left;
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+
+
+/*Position*/
+
+.hyl-rel {
+    position: relative;
+}
+
+.hyl-space-bottom {
+    margin-bottom: 16px;
+    display: block;
+}
+
+.recaptcha-cart {
+    re-captcha {
+        @include md\- {
+            display: block;
+            width: 300px;
+            margin: auto;
+        }
+    }
+}
+.app-cart-summary {
+  hmt-tooltip{
+    .info-poupover{
+      top: 100%;
+      max-width: 250px;
+    }
+  }
+}
+
+.htm-block{
+    display: block;
+}
+.modal-open{
+    .modal{
+        overflow-y: auto !important;
+    }
+}
+
+/*Bootstrap Over rides*/
+.btn:focus,.btn:active{
+    box-shadow: none !important;
+}

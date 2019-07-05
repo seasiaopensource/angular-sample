@@ -1,0 +1,160 @@
+<div class="how-its-works pt-4 pb-4">
+  <div class="page-title mb-3">
+    {{pageText.title}}
+  </div>
+  <div class="how-its-work-step">
+    <hmt-steps></hmt-steps>
+  </div>
+  <div class="faq-section">
+    <div class="faq-title  mb-3">
+      {{pageText.subTitle}}
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              {{pageText.faqs.first.heading}}
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">
+              {{pageText.faqs.first.title}}
+            </p>
+            <p class="mt-0 mb-3">{{pageText.faqs.first.description}}</p>
+            <ul class="m-0 pl-4 pr-4">
+              <li *ngFor="let feature of pageText.faqs.first.features">{{feature}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              {{pageText.faqs.second.heading}}
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">{{pageText.faqs.second.title}}</p>
+            <ul class="m-0 pl-4 pr-4">
+              <li *ngFor="let feature of pageText.faqs.second.features">{{feature}}</li>
+              <li>{{pageText.faqs.second.text}}<a target="_blank" href="http://about.att.com/content/csr/home/people/serving-our-communities/supporting-our-troops.html">{{pageText.faqs.second.link}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 ">
+        <div class="card-header p-2 pl-3 pr-3" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              {{pageText.faqs.third.heading}}
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse3" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">{{pageText.faqs.third.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              {{pageText.faqs.fourth.heading}}
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">{{pageText.faqs.fourth.title}}</p>
+            <p class="mt-0 mb-3">{{pageText.faqs.fourth.description}}</p>
+            <ul class="m-0 pl-4 pr-4">
+              <li *ngFor="let feature of pageText.faqs.fourth.features">{{feature}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+              {{pageText.faqs.fifth.heading}}
+            </button>
+          </h2>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-0">{{pageText.faqs.fifth.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+              {{pageText.faqs.sixth.heading}}
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse6" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">{{pageText.faqs.sixth.title}}</p>
+            <p class="mt-0 mb-0">{{pageText.faqs.sixth.description}} <a target="_blank" href="http://about.att.com/content/csr/home/environment/phone-recycling-and-waste-management.html">{{pageText.faqs.sixth.link}}</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading7">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+              {{pageText.faqs.seventh.heading}}
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapse7" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-0">
+              {{pageText.faqs.seventh.description}}
+              <a target="_blank" href="">{{pageText.faqs.seventh.link}}</a>.
+              {{pageText.faqs.seventh.text}} <a target="_blank" href="">{{pageText.faqs.seventh.linkDevice}}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-header p-2 pl-3 pr-3" id="heading8">
+          <h2 class="mb-0">
+            <button class="btn btn-link w-100 text-left p-0 pr-4" type="button" data-toggle="collapse"
+                    data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+              {{pageText.faqs.eighth.heading}}
+            </button>
+          </h2>
+        </div>
+        <div id="collapse8" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="mt-0 mb-3">{{pageText.faqs.eighth.title}}</p>
+            <p class="mt-0 mb-0">{{pageText.faqs.eighth.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

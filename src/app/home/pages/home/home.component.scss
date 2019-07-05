@@ -1,0 +1,9 @@
+@import 'variables';
+
+.home-container{
+  padding-bottom: 68px;
+  @include sm\-{
+    padding-bottom: 0px;
+  }
+}
+ 

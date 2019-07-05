@@ -1,0 +1,37 @@
+@import 'variables';
+.form-field {
+    label {
+        font-size: $font-size-extra-small;
+        color: rgba($key-color-2, 0.5);
+        margin-bottom: 4px;
+    }
+    select.form-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(../../../../../assets/images/caret.svg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: 94% 54%;
+        color: rgba($key-color-2, 0.50);
+    }
+    .form-control {
+        @include input;        
+        height: 32px;      
+    }    
+    input.form-control{
+      line-height: 32px;
+    }
+  textarea{
+    &.form-control{
+      height:initial;
+      line-height: initial;
+      resize: none;
+      padding-top: 5px;
+    }
+  }
+    .field-error {
+        color: $danger;
+        font-size: $font-size-extra-small;
+    }
+}

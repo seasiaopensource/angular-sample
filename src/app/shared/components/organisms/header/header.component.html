@@ -1,0 +1,60 @@
+<nav class="h-header navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid header-container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/logo.svg" class="pr-2" alt="image" />
+      <label class="mb-0"
+        ><span>{{ pageText?.brandName }} </span
+        ><span>{{ pageText?.brandTag }}</span></label
+      >
+    </a>
+    <button
+      #navbarToggler
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a
+            class="nav-link"
+            (click)="checkAndCollapse()"
+            routerLink="/start/trade"
+            >{{ pageText?.navLinks?.startTrade }}</a
+          >
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a
+            class="nav-link"
+            (click)="checkAndCollapse()"
+            routerLink="/how-it-works"
+            >{{ pageText?.navLinks?.howItWorks }}</a
+          >
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a
+            class="nav-link"
+            (click)="checkAndCollapse()"
+            routerLink="/contact-us"
+            >{{ pageText?.navLinks?.askForHelp }}</a
+          >
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a
+            class="nav-link"
+            (click)="checkAndCollapse()"
+            routerLink="/help"
+            >{{ pageText?.navLinks?.tradeInStatus }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

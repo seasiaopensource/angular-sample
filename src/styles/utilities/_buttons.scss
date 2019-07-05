@@ -1,0 +1,88 @@
+//Buttons
+ 
+$padding: 6px 12px !default;
+$radius: 0px !default;
+$bgcolor: $key-color-1;
+$textcolor: $inverted-color;
+$btn-light-border-color: #767777;
+$btn-light-text-color: #767777;
+@mixin primary-button {
+    background: $bgcolor;
+    color: $textcolor;
+    padding: $padding;
+    border-color: $key-color-1;
+    border-radius: $radius;
+    font-size: $font-size-regular;
+    min-width: 160px;
+    &:hover,&:focus,&:active:focus{
+      background: darken($bgcolor, 5%);
+      color: $inverted-color;
+      outline: 0px;
+    }
+}
+
+@mixin primary-radius-button {
+    background: $bgcolor;
+    color: $textcolor;
+    padding: $padding;
+    @include border-radius(4px);
+    min-width: 160px;
+    font-size: $font-size-small;
+    &:hover,&:focus,&:active:focus{
+      background: darken($bgcolor, 5%);
+      color: $inverted-color;
+      outline: 0px;
+    }
+}
+
+@mixin primary-border-button {
+    background: $textcolor;
+    color: $bgcolor;
+    padding: $padding;
+    font-size: $font-size-small;
+    min-width: 160px;
+}
+
+@mixin primary-border-radius-button{
+    background: $textcolor;
+    color: $bgcolor;
+    padding: $padding;
+    font-size: $font-size-small;
+    min-width: 160px;
+    @include border-radius(4px);
+}
+
+@mixin primary-circular-button{
+    background: $textcolor;
+    color: $bgcolor;
+    padding: $padding;
+    font-size: $font-size-small;
+    min-width: 160px;
+    @include border-radius(25px);
+}
+@mixin input{
+    background: $inverted-color;
+    color: $key-color-2;
+    padding: 5px 8px;
+    font-size: $font-size-extra-small;
+    width: 100%;
+    @include border-radius(4px);
+    box-shadow: none;
+    border: 1px solid rgba($key-color-2,0.1);
+    height: 32px;
+    &::-webkit-input-placeholder{
+        color: rgba($key-color-2, 0.50);
+        font-size: $font-size-extra-small;
+    }
+    &::-moz-placeholder{
+        color: rgba($key-color-2, 0.50);
+        font-size: $font-size-extra-small;
+    }
+    &::-ms-input-placeholder{
+        color: rgba($key-color-2, 0.50);
+        font-size: $font-size-extra-small;
+    }
+    &:focus{
+      outline: none;
+    }
+}

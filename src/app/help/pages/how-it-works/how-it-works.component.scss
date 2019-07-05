@@ -1,0 +1,75 @@
+@import "variables";
+.page-title {
+  @include page-title;
+}
+
+.faq-title {
+  @include head;
+}
+
+.faq-section {
+  .card {
+    @include border-radius(4px);
+    margin-bottom: 8px;
+  }
+  .card-header {
+    background-color: $inverted-color;
+    button {
+      color: $key-color-2;
+      font-size: $font-size-large;
+      font-family: $font-family;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 17px;
+        right: 1rem;
+        text-align: center;
+        padding: 0;
+        background-size: 20px;
+      }
+      &[aria-expanded="true"] {
+        &::after {
+          background-image: url("../../../../assets/images/minus.svg");
+        }
+      }
+      &[aria-expanded="false"] {
+        &::after {
+          background-image: url("../../../../assets/images/plus.svg");
+        }
+      }
+    }
+  }
+  .card-body {
+    p {
+      color: $key-color-2;
+      text-align: left;
+      font-size: $font-size-small;
+      font-family: $font-family;
+    }
+    li {
+      color: $key-color-2;
+      text-align: left;
+      font-size: $font-size-small;
+      font-family: $font-family;
+    }
+    a {
+      color: $key-color-1;
+    }
+  }
+}
+
+.box-description {
+  @include xs\- {
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import 'variables';
+.info-relative {
+    position: relative;
+    &:hover {
+        .info-poupover {
+            display: block;
+        }
+    }
+}
+
+.info-poupover {
+    background: $inverted-color;
+    position: absolute;
+    top: 146%;
+    box-shadow: 0px 2px 4px rgba($key-color-2, 0.2);
+    width: 350px;
+    height: auto;
+    left: -4px;
+    z-index: 99999;
+    padding: 15px;
+    text-align: left;
+    display: none;
+    &:before {
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 8px solid rgba($key-color-2, 0.2);
+        position: absolute;
+        content: "";
+        top: -8px;
+        left: 8px;
+        @include lg\- {
+            left: 28px;
+            right: unset;
+        }        
+        @include sm\- {
+            right: 3px;
+            left: auto;
+        }
+    }
+    @include lg\- {
+        left: -24px;
+        right: unset;
+    }
+    @include md\- {
+        width: 200px;
+    }
+    @include sm\- {
+        width: 180px;
+        left: 0;
+        right: auto;
+    }
+    @include sm\- {
+        left: auto;
+        right: 0;
+        width: 150px;
+    }
+    &.info-right {
+        left: auto;
+        right: -55px;
+        &:before {
+            right: 60px;
+            left: auto;
+        }
+    }
+}

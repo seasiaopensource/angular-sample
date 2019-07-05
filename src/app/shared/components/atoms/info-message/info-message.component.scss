@@ -1,0 +1,27 @@
+@import 'variables';
+.htm-info-block{
+  padding: 10px;
+  @include border-radius(4px);
+  text-align: left;
+  font-size: 12px;
+  display:flex;
+  display:-webkit-flex;
+  display:-ms-flex;
+  &-icon{
+    width: 15px;
+    margin-right: 8px;
+  }
+  &-text{
+    margin:0;
+  }
+  &._error{
+    background: $err-bg;
+    color:$err-color;
+    border: 1px solid $err-border-color;
+  }
+  &._success{
+    background: $suc-bg;
+    color:$suc-color;
+    border: 1px solid $suc-border-color;
+  }
+}

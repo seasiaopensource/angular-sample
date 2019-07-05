@@ -1,0 +1,34 @@
+// Font
+$font-family: 'Heebo-Regular';
+$font-family-bold: 'Heebo-Bold';
+
+$font-size-ultimate-large: 6rem; // 72px
+$font-size-double-extra-large: 4rem; //48pt
+$font-size-double-large: 2.250rem; //36px
+$font-size-extra-large: 2rem; // 24pt
+$font-size-larger: 1.5rem; // 24px
+$font-size-large: 1rem; // 16px
+$font-size-medium: 1.34rem; // 16pt
+$font-size-regular: 1.167rem; // 14pt
+$font-size-small: 0.875em; // 14px
+$font-size-extra-small: 0.750rem; // 12px
+
+//Font Sizes based on Pixels
+$fs-text-small: 12px;
+$fs-text-normal: 14px;
+$fs-text-large: 36px;
+
+//Button
+$font-size-btn: 16px; // 10pt
+
+//Product grid
+$fs-product-title: 12px; 
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-regular-color: $color-base-black !default;
+$font-heading-color: $color-base-black !default;
+$font-inverted-color: $color-base-white !default;

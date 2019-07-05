@@ -1,0 +1,43 @@
+@import "variables";
+
+.search-pagination {
+  .pagination--first {
+    position: relative;
+    padding-right: 5px;
+    &:after {
+      content: "...";
+      position: absolute;
+      right: 0px;
+      color: $key-color-2;
+      font-size: $font-size-small;
+      bottom: 5px;
+      z-index: 8;
+    }
+  }
+  .pagination--last {
+    position: relative;
+    padding-left: 5px;
+    &:before {
+      content: "...";
+      position: absolute;
+      left: 0;
+      color: $key-color-2;
+      font-size: $font-size-small;
+      bottom: 5px;
+      z-index: 8;
+    }
+  }
+  .page-item {
+    .page-link {
+      border: none;
+      color: $key-color-2;
+      font-family: $font-family-bold;
+      padding: 8px 11px;
+      cursor: pointer;
+      background: none;
+      &.active {
+        color: $key-color-1;
+      }
+    }
+  }
+}

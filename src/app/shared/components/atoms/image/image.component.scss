@@ -1,0 +1,16 @@
+@import 'variables';
+img {
+    &.device-image {
+        max-height: 120px;
+    }
+    &.carrier-image {
+        max-height: 160px;
+    }
+    &.brand-image {
+        max-height: 100px;
+        width: initial;
+    }
+    &.cart-image {
+        max-height: 120px;
+    }
+}

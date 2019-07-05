@@ -1,0 +1,137 @@
+<div class="contact-us pt-4 pb-4">
+  <div class="page-title mb-2">
+    {{pageText.title}}
+  </div>
+  <div class="contact-subtitle mb-4">
+    {{pageText.description}}
+  </div>
+  
+  <div class="contact-form p-4">
+    <hmt-info-message *ngIf="showSuccessMessage"
+                      class="htm-block mb-3"
+                      [message]="pageText.success"
+                      type="success"></hmt-info-message>
+    <div class="row">
+      <div class="col-xl-8 col-md-6 col-sm-12">
+        <form autocomplete="off" [formGroup]="contactForm">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+              <hmt-form-field
+                label="{{pageText.fields.email.label}}"
+                placeholder="{{pageText.fields.email.placeholder}}"
+                controlName="USER_EMAIL"
+                [form]="contactForm"
+                [errorMessages]="contactFormErrorMessages"
+                [isSubmitted]="isSubmitted"
+                class="hyl-space-bottom"
+              ></hmt-form-field>
+
+              <div class="form-group">
+                <label>{{pageText.fields.topic.label}}</label>
+                <div class="questions-radio">
+                  <div class="custom-control custom-radio" *ngFor="let topic of pageText.fields.subjects; let i = index">
+                    <input type="radio"
+                           class="custom-control-input"
+                           [id]="'topic_' + i"
+                           name="SUBJECT"
+                           [value]="topic"
+                           formControlName="SUBJECT"/>
+                    <label class="custom-control-label"
+                           [for]="'topic_' + i">{{topic}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field-error" *ngIf="contactForm.controls.SUBJECT.invalid && isSubmitted">
+                Topic is required.
+              </div>
+              <hmt-form-field
+                label="{{pageText.fields.confirmation.label}}"
+                placeholder="{{pageText.fields.confirmation.placeholder}}"
+                controlName="QUOTE_NUMBER"
+                [form]="contactForm"
+                [errorMessages]="contactFormErrorMessages"
+                [isSubmitted]="isSubmitted"
+                class="hyl-space-bottom"
+              ></hmt-form-field>
+              <hmt-form-field
+                label="{{pageText.fields.comments.label}}"
+                placeholder="{{pageText.fields.comments.placeholder}}"
+                controlName="COMMENT"
+                type="textarea"
+                [form]="contactForm"
+                [errorMessages]="contactFormErrorMessages"
+                [isSubmitted]="isSubmitted"
+                class="hyl-space-bottom hyl-noresize"
+              ></hmt-form-field>
+
+              <re-captcha
+                formControlName="RECAPTCHA"
+                [siteKey]="recaptchaKey" class="hyl-space-bottom"></re-captcha>
+
+              <hmt-info-message *ngIf="showError"
+                    class="htm-block mb-3"                    
+                    type="error"></hmt-info-message>
+
+              <button type="button"
+                      class="btn"
+                      (click)="handleButtonClick()">{{pageText.button}}</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-xl-4 col-md-6 col-12 col-sm-12">
+        <div class="contact-right mb-3 p-3 d-flex align-items-center">
+          <div class="contact-image">
+            <img src="assets/images/contact1.png" alt="image">
+          </div>
+          <div class="contact-content ml-3">
+            <h3>{{pageText.features.first.title}}</h3>
+            <p class="mb-2">{{pageText.features.first.description}}</p>
+            <a routerLink="/how-it-works">{{pageText.features.first.link}}</a>
+          </div>
+        </div>
+        <div class="contact-right mb-3 p-3 d-flex align-items-center">
+          <div class="contact-image">
+            <img src="assets/images/contact2.png" alt="image">
+          </div>
+          <div class="contact-content ml-3">
+            <h3>{{pageText.features.second.title}}</h3>
+            <h3>{{pageText.features.second.description[0]}}</h3>
+            <p class="mb-0">
+              {{pageText.features.second.description[1]}}
+              <br>
+              {{pageText.features.second.description[2]}}
+            </p>
+          </div>
+        </div>
+        <div class="contact-right mb-3 p-3 d-flex align-items-center">
+          <div class="contact-image">
+            <img src="assets/images/contact3.png" alt="image">
+          </div>
+          <div class="contact-content ml-3">
+            <h3>{{pageText.features.third.title}}
+              <br>
+              {{pageText.features.third.description}}
+            </h3>
+            <a href="https://promotioncard.att.com/" target="_blank">{{pageText.features.third.link}}</a>
+          </div>
+        </div>
+        <div class="contact-right mb-3 p-3 d-flex align-items-center">
+          <div class="contact-image">
+            <img src="assets/images/contact4.png" alt="image">
+          </div>
+          <div class="contact-content ml-3">
+            <h3>
+              {{pageText.features.fourth.title}}
+              <br>
+              {{pageText.features.fourth.description}}
+            </h3>
+            <a routerLink="/help">{{pageText.features.fourth.link}}</a>
+          </div>
+        </div>
+      </div>   
+      <hmt-loading *ngIf="isLoading" overlay="true" [message]="pageText.loading.message"></hmt-loading>   
+    </div>
+  </div>
+</div>

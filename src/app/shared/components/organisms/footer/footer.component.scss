@@ -1,0 +1,99 @@
+@import "variables";
+
+footer {
+  background: $inverted-color;
+  padding: 25px 0px 0 0px;
+  position: relative;
+  font-family: $font-family;
+  @include xl {
+    padding: 25px 0px 0px;
+    &.full-text {
+      padding: 25px 0px;
+    }
+  }
+  .footer-container {
+    max-width: 1128px;
+    width: 100%;
+  }
+  p {
+    color: $color-mute;
+    font-size: $fs-text-small;
+    text-align: justify;
+
+    a {
+      color: $key-color-1;
+      @include xs\- {
+        display: inline-block;
+      }
+    }
+  }
+
+  .chat-footer {
+    position: relative;
+
+    a {
+      color: $key-color-1;
+      text-decoration: none;
+      font-size: $font-size-small;
+      text-align: right;
+      font-family: $font-family-bold;
+      display: block;
+      @include xs {
+        display: inline-block;
+        text-align: left;
+      }
+      @include sm {
+        display: inline-block;
+        text-align: left;
+      }
+      @include md {
+        display: inline-block;
+        text-align: left;
+      }
+      @include lg {
+        padding-right: 55px;
+      }
+    }
+
+    .chat-icon {
+      width: 40px;
+      height: 40px;
+      @include border-radius(50%);
+      background: $key-color-1;
+      display: inline-block;
+      text-align: center;
+      line-height: 38px;
+      cursor: pointer;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}
+.modal-body {
+  .print_section {
+    display: none;
+  }
+}
+.modal-footer {
+  padding-top: 0;
+  border: 0;
+  .btn {
+    @include primary-radius-button;
+    font-size: $font-size-btn;
+    &:focus,
+    &:hover {
+      color: $inverted-color;
+      outline: none !important;
+      border-color: $key-color-1;
+      box-shadow: none !important;
+    }
+  }
+}
+.terms-condition {
+  .modal-body {
+    p {
+      color: rgba($key-color-2, 0.8);
+    }
+  }
+}

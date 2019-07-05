@@ -1,0 +1,19 @@
+<!-- Banner Section Starts -->
+<section class="banner">
+    <div class="row">
+      <div class="col-sm-6 col-md-8">
+        <div class="banner-description">
+          <h2>{{bannerContent.heading}}</h2>
+          <h4>{{bannerContent.subHeading}}</h4>
+          <p>{{bannerContent.content}}</p>
+          <a class="btn " routerLink="start/trade">
+            {{bannerContent.buttonText}}
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-4 text-center">
+        <img [src]="'assets/images/' + bannerContent.image"  alt="image"/>
+      </div>
+    </div>
+</section>
+<!-- Banner Section Ends -->

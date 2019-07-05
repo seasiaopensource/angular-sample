@@ -1,0 +1,133 @@
+@import 'variables';
+
+.page-title {
+  @include page-title;
+}
+
+.contact-subtitle {
+  font-size: $font-size-large;
+  color: rgba($key-color-2, 0.5);
+  width:100%;
+  max-width: 750px;
+  font-weight: 700;
+}
+
+.contact-form {
+  background-color: $inverted-color;
+  @include border-radius(4px);
+  position: relative;
+  label {
+    color: rgba($key-color-2, 0.5);
+    font-size: $font-size-extra-small;
+  }
+
+  .form-control {
+    @include input;
+    max-width: 336px;
+  }
+  textarea{
+    &.form-control{
+      resize: none;
+      padding-top:5px;
+    }
+  }
+
+
+  .btn {
+    @include primary-radius-button;
+    min-width: 110px;
+  }
+
+  .field-error {
+    color: $danger;
+    font-size: $font-size-extra-small;
+  }
+  .custom-control{
+    margin-bottom: 8px;
+  }
+  .custom-control-label {
+    color: $key-color-2;
+    font-size: $font-size-extra-small;
+    cursor: pointer;
+    line-height: 22px;
+    &::before {
+      border: 2px solid $key-color-2;
+      top: 2px;
+    }
+  }
+
+  .questions-radio {
+    .custom-control-inline {
+      margin-right: 40px;
+    }
+
+    .custom-control-input {
+      &:checked {
+        & ~ .custom-control-label {
+          &::before {
+            border-color: $key-color-1;
+            background: none;
+          }
+
+          &::after {
+            @include border-radius(50%);
+            background-color: $key-color-1;
+            width: 8px;
+            height: 8px;
+            margin-left: 4px;
+            margin-top: 2px;
+            background-image: none;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    @include sm\- {
+      margin-bottom: 28px;
+    }
+  }
+}
+re-captcha{
+  @include xs\- {
+    transform: scale(0.8);
+    margin-left: -30px;
+  }
+}
+
+.contact-right {
+  border: 1px solid rgba($key-color-2, 0.05);
+  @include border-radius(4px);
+
+  .contact-content {
+    h3 {
+      color: $key-color-2;
+      font-size: $font-size-small;
+      font-family: $font-family-bold;
+    }
+
+    p {
+      color: rgba($key-color-2, 0.5);
+      font-size: $font-size-small;
+    }
+
+    a {
+      color: $key-color-1;
+      font-size: $font-size-small;
+      font-family: $font-family-bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.contact-image{
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-self: center;
+  @include sm\-{
+    max-width: 80px;
+  }
+}

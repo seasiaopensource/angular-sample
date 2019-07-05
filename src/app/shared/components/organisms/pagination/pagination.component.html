@@ -1,0 +1,45 @@
+<div
+  class="search-pagination"
+  *ngIf="totalPages > 1 && currentPage <= totalPages"
+>
+  <ul class="pagination justify-content-center align-items-center">
+    <li
+      class="page-item"
+      [ngClass]="{ 'previous-disabled': !(currentPage > 1) }"
+    >
+      <a class="page-link arrow" (click)="previousPage()">
+        <img src="assets/images/previous.svg" alt="image" />
+      </a>
+    </li>
+    <ng-container *ngFor="let pageNumber of pages">
+      <li
+        *ngIf="
+          Math.abs(pageNumber - currentPage) < 3 ||
+          pageNumber == totalPages - 1 ||
+          pageNumber == 1
+        "
+        [ngClass]="{
+          'pagination--current': currentPage === pageNumber,
+          'pagination--last':
+            pageNumber == totalPages - 1 &&
+            Math.abs(pageNumber - currentPage) > 3,
+          'pagination--first':
+            pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3
+        }"
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          [ngClass]="{ active: currentPage === pageNumber }"
+          (click)="setPage(pageNumber)"
+          >{{ pageNumber }}</a
+        >
+      </li>
+    </ng-container>
+    <li class="page-item">
+      <a class="page-link arrow" (click)="nextPage()">
+        <img src="assets/images/next.svg" alt="image" />
+      </a>
+    </li>
+  </ul>
+</div>

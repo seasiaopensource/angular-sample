@@ -1,0 +1,72 @@
+<footer [ngClass]="{ 'full-text': !languageVersion && !chatEnabled }">
+  <div class="container-fluid footer-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>
+          {{ pageText?.content }}
+          <a
+            href="javascript:void(0)"
+            data-toggle="modal"
+            data-target="#terms-condition"
+            >{{ pageText?.terms }}</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="chat-footer" *ngIf="languageVersion || chatEnabled">
+      <a *ngIf="languageVersion" href="javascript:void(0)">{{
+        pageText?.languages?.spanish
+      }}</a>
+      <span *ngIf="chatEnabled" class="chat-icon">
+        <img src="assets/images/chat-icon.svg" alt="Icon" />
+      </span>
+    </div>
+  </div>
+  <div
+    class="modal fade terms-condition"
+    id="terms-condition"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="mb-0">{{ pageText?.termsPopup.title }}</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>{{ pageText?.termsPopup.text }}</p>
+          <div class="print_section">
+            <div id="printable">
+              <h2 class="print_heading">
+                {{ pageText?.termsPopup.title }}
+              </h2>
+              <p class="print_text">
+                {{ pageText?.termsPopup.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            printSectionId="printable"
+            styleSheetFile="assets/css/print.css"
+            ngxPrint
+            class="btn btn-success btn-print"
+          >
+            Print
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

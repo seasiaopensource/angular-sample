@@ -1,0 +1,28 @@
+<div class="form-field" [formGroup]="form">
+  <label>{{label}}</label>
+  <input *ngIf="controlType === 'text'"
+      type="text"
+      class="form-control"
+      [placeholder]="placeholder"
+      [formControlName]="controlName">
+  <select *ngIf="controlType === 'select'" [formControlName]="controlName" class="form-control">
+    <option value="">Please select</option>
+    <option *ngFor="let option of options" [value]="option.value">{{option.title}}</option>
+  </select>
+  <textarea *ngIf="controlType === 'textarea'"
+            [formControlName]="controlName"
+            rows="5"
+            class="form-control noresize"
+            [placeholder]="placeholder"></textarea>
+  <div class="field-error mt-2" *ngIf="isSubmitted && form.controls[controlName] && form.controls[controlName].errors">
+    <ng-template [ngIf]="form.controls[controlName].errors.required">
+      {{label}} is required.
+    </ng-template>
+    <ng-template [ngIf]="form.controls[controlName].errors.email">
+      {{errorMessages[controlName].email}}
+    </ng-template>
+    <ng-template [ngIf]="form.controls[controlName].errors.minlength">
+      {{errorMessages[controlName].minlength || ''}}
+    </ng-template>
+  </div>
+</div>

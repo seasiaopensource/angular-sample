@@ -1,0 +1,50 @@
+@import 'variables';
+
+.banner {
+  font-family: $font-family;
+  @include  lg\+ {
+    min-height: 352px;
+  }
+
+  .banner-description {
+    padding: 3rem 0 0 0;
+
+    h2 {
+      font-size: $font-size-double-large;
+      font-family: $font-family-bold;
+      color: $key-color-2;
+      margin: 10px 0 0 0;
+      @include sm\- {
+        font-size: $font-size-extra-large;
+      }
+    }
+    h4 {
+      font-size: $font-size-large;
+      font-weight: $font-weight-regular;
+      color: $key-color-2;
+      margin: 20px 0 20px;
+    }
+
+    p {
+      color: rgba($sp-blue, .5);
+      font-size: $font-size-extra-small;
+      margin: 0 0 15px 0;
+    }
+
+    .btn {
+      @include primary-radius-button;
+      font-size: $font-size-btn;
+    }
+  }
+
+  img {
+    @media(max-width: 575px) {
+      transform: rotate(90deg);
+      @include xs{
+        max-width: 57%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

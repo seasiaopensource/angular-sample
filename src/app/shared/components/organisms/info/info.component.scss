@@ -1,0 +1,29 @@
+@import "variables";
+
+.receive-value-shipping {
+  border: 1px solid rgba($key-color-2, 0.05);
+  width: 100%;
+  padding: 15px 8px;
+  margin-top: 28px;
+  @include border-radius(4px);
+
+  .receive-content {
+    h2 {
+      color: $key-color-2;
+      font-size: $font-size-large;
+      font-family: $font-family-bold;
+    }
+
+    p {
+      color: $key-color-2;
+      font-size: $font-size-extra-small;
+      font-family: $font-family;
+    }
+
+    a {
+      color: $key-color-1;
+      font-size: $font-size-extra-small;
+      font-family: $font-family-bold;
+    }
+  }
+}
